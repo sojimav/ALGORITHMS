@@ -14,8 +14,11 @@ namespace ALGORITHMS
             var withdraw = CashWithdrawl(400);
             foreach(var item in withdraw)
             {
-                Console.Write($"[{item}] ");
+                Console.Write($"{item} ");
             }
+
+            Cash_Register cash_Register = new Cash_Register();
+            cash_Register.Register(230);
             
         }
 
