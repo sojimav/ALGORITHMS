@@ -10,7 +10,13 @@ namespace ALGORITHMS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(IsIsogram("moose"));
+          //  Console.WriteLine(IsIsogram("moose"));
+            var withdraw = CashWithdrawl(400);
+            foreach(var item in withdraw)
+            {
+                Console.Write($"[{item}] ");
+            }
+            
         }
 
         static bool IsIsogram(string param)
@@ -29,9 +35,23 @@ namespace ALGORITHMS
                 }
             }
               return true;
-
-
-
         }
+
+
+        static List<int> CashWithdrawl(int amount)
+        {
+            int hundred = amount/100;
+            amount %= 100;
+            int fifty = amount / 50;
+            amount %= 50;
+            int twenty = amount / 20;
+            var list = new List<int> { hundred, fifty, twenty };
+
+            return list;
+            
+        }
+
+
+
     }
 }
