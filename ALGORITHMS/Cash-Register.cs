@@ -8,8 +8,16 @@ namespace ALGORITHMS
 {
     internal class Cash_Register
     {
-        public  int[] Register(int amount)
+        public  int[] Register(int money)
         {
+            string toString = money.ToString();
+            char last = toString.Last<char>();
+            if (last != '0')
+            {
+                toString = toString.Replace(last, '0');
+            }
+
+            int amount = int.Parse(toString);
             int _100 = 0;
             int _50 = 0;
             int _20 = 0;

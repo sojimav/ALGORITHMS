@@ -10,15 +10,21 @@ namespace ALGORITHMS
     {
         static void Main(string[] args)
         {
-          //  Console.WriteLine(IsIsogram("moose"));
+            /*
+            Console.WriteLine(IsIsogram("moose"));
             var withdraw = CashWithdrawl(400);
             foreach(var item in withdraw)
             {
                 Console.Write($"{item} ");
             }
 
-            Cash_Register cash_Register = new Cash_Register();
-            cash_Register.Register(230);
+             Cash_Register cash_Register = new Cash_Register();
+             cash_Register.Register(230);
+
+            */
+
+             WhoLikesMe();
+           // Console.WriteLine(result);
             
         }
 
@@ -55,6 +61,44 @@ namespace ALGORITHMS
         }
 
 
+        static void WhoLikesMe()
+        {
+
+            string name = "";
+           string result = "";
+            var list = new List<string>();
+            do
+            {
+                Console.Write("Enter a name: ");
+                name = Console.ReadLine()!;
+                if (!String.IsNullOrEmpty(name))
+                {
+                    list.Add(name);
+                }
+                
+            }
+            while (!String.IsNullOrWhiteSpace(name));
+
+           
+            Console.WriteLine();
+            //list.Remove("");
+            if(list.Count > 0)
+            {
+                for(int i = 0; i < list.Count; i++)
+                {
+                result = (list.Count == 1) ? $"{list[0]} likes this" : (list.Count == 2) ?
+                        $"{list[0]} and {list[1]} like your post" 
+                        : $"{list[0]}, {list[1]} and {list.Count - 2} others like your post.";
+
+                }
+                Console.WriteLine(result);
+            }
+            else
+            Console.WriteLine(" no one likes this");
+        
+        }
+
 
     }
 }
+
