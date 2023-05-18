@@ -10,13 +10,22 @@ namespace ALGORITHMS
     {
         static void Main(string[] args)
         {
-          //  Console.WriteLine(IsIsogram("moose"));
+            /*
+          Console.WriteLine(IsIsogram("moose"));
             var withdraw = CashWithdrawl(400);
             foreach(var item in withdraw)
             {
                 Console.Write($"[{item}] ");
             }
-            
+            */
+
+             MoshExercise3 moshExercise3 = new MoshExercise3();
+            //var result = moshExercise3.NameReverse();
+            //Console.WriteLine(result);
+
+            moshExercise3.SortUserInput();
+
+
         }
 
         static bool IsIsogram(string param)
@@ -51,12 +60,6 @@ namespace ALGORITHMS
             
         }
 
-
-<<<<<<< Updated upstream
-=======
-       
-
->>>>>>> Stashed changes
 
     }
 }
