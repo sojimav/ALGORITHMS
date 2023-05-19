@@ -19,14 +19,37 @@ namespace ALGORITHMS
             }
             */
 
-             MoshExercise3 moshExercise3 = new MoshExercise3();
+            // MoshExercise3 moshExercise3 = new MoshExercise3();
             //var result = moshExercise3.NameReverse();
             //Console.WriteLine(result);
 
-            moshExercise3.SortUserInput();
+          // moshExercise3.SortUserInput();
 
+            //FileInfo info = new FileInfo(@"C:\Users\Decagon\OneDrive\Desktop\Victor\ALGORITHMS\ALGORITHMS\Experiment.cs");
+            var path = @"Users\Decagon\OneDrive\Desktop\Victor\ALGORITHMS\ALGORITHMS\ALGO.cs";
+             string fileName =  Path.GetFileName(path);
+             var directoryName = Path.GetDirectoryName(path);
+            var justFileName = Path.GetFileNameWithoutExtension(path);
+            var getExtension =  Path.GetExtension(path);
 
+                Console.WriteLine($" FileName: {fileName} \n DirectoryName:" +
+                $" {directoryName} \n fileNameWithoutExtension: " +
+                $"{justFileName} \n fileExtension: {getExtension} ");
+
+            //info.MoveTo(path, true);
+            
+            
+            //var file =  Directory.GetDirectories(path, "*.*", SearchOption.AllDirectories);
+            
+            //foreach( var item in file )
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //File.Create(path);
         }
+
+
 
         static bool IsIsogram(string param)
         {
